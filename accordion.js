@@ -12,7 +12,7 @@
         module.exports = factory(require('jquery'));
     } else {
         // Browser globals (root is window)
-        root.returnExports = factory(root.jQuery);
+        root.accordion = factory(root.jQuery);
     }
 }(this, function ($) {
 
@@ -183,7 +183,7 @@
 				// Close
 				// For initial transition, set height with inline styles
 				// to auto
-				var height = $content.outerHeight();
+				var height = getHeights($content.children());
 				var animationComplete = function () {
 					$content.attr(as, opt.states.closed);
 					$target.attr(as, opt.states.closed);
@@ -228,7 +228,7 @@
 			$elements.each(function (index, element) {
 				var $this = $(this);
 				if ($this.is(':visible')) {
-					height += $(this).outerHeight();
+					height += $(this).outerHeight(true);
 				}
 			});
 
