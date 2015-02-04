@@ -29,7 +29,7 @@ Add the attributes to your HTML elements:
   // Start the accordion script with the options
   var options = {
   
-    // How are you gonne name the different states?
+    // How are you gonna name the different states?
     // These values will be written to the data-accordion-state attribute
     states: {
       open: 'open',
@@ -58,7 +58,7 @@ Add the attributes to your HTML elements:
 ```
 Of course, you should store the script code in a separate file.
 
-** Flickering/FOUC (flash of unstyled content):**
+**Flickering/FOUC (flash of unstyled content):**
 The script injects styles for accordion content as soon as possible, but normally the content display before these styles take effect.
 To counteract this, you can include the following lines in your CSS file/s: 
 ```css
