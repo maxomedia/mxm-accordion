@@ -146,6 +146,7 @@
 					$content.attr(as, opt.states.open);
 					$target.attr(as, opt.states.open);
 					$content.css({height: 'auto'});
+					$content.trigger('accordion.' + opt.states.open);
 				}
 
 				// Set initial states
@@ -187,6 +188,7 @@
 				var animationComplete = function () {
 					$content.attr(as, opt.states.closed);
 					$target.attr(as, opt.states.closed);
+					$content.trigger('accordion.' + opt.states.closed);
 				}
 
 				// Initial state
