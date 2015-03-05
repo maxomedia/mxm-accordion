@@ -76,9 +76,9 @@
 			if (animationType === 'css') {
 
 				// Default style
-				var def = '[data-accordion-content]{{0}}';
+				var def = '[data-accordion-state="{1}"], [data-accordion-state="{2}"]{{0}}';
 				var defopt = opt.accordions.DEFAULT;
-				var spec = '[data-accordion-content="{0}"]{{1}}';
+				var spec = '[data-accordion-content="{0}"][data-accordion-state="{2}"], [data-accordion-content="{0}"][data-accordion-state="{3}"]{{1}}';
 				var stack = [
 					'-webkit-transition: height {0}ms {1};',
 					'-moz-transition: height {0}ms {1};',
@@ -88,7 +88,7 @@
 				].join('');
 
 				// Push default styles
-				rule.push(def.compose(stack.compose(defopt.duration, defopt.easing)));
+				rule.push(def.compose(stack.compose(defopt.duration, defopt.easing),  opt.states.opening, opt.states.closing));
 
 				// Loop through spec styles
 				$contents.each(function () {
@@ -97,7 +97,7 @@
 					var specopt = opt.accordions[id];
 					if (specopt) {
 						specopt = $.extend({}, defopt, specopt);
-						rule.push(spec.compose(id, stack.compose(specopt.duration, specopt.easing)));
+						rule.push(spec.compose(id, stack.compose(specopt.duration, specopt.easing), opt.states.opening, opt.states.closing));
 					}
 				});
 			}
