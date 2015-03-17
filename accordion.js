@@ -146,6 +146,7 @@
 					$content.attr(as, opt.states.open);
 					$target.attr(as, opt.states.open);
 					$content.css({height: 'auto'});
+					$target.triggerHandler('accordion.' + opt.states.open);
 					$content.triggerHandler('accordion.' + opt.states.open);
 				}
 
@@ -153,6 +154,7 @@
 				$content.css({'height': 0});
 				$content.attr(as, opt.states.opening);
 				$target.attr(as, opt.states.opening);
+				$target.triggerHandler('accordion.' + opt.states.opening);
 				$content.triggerHandler('accordion.' + opt.states.opening);
 
 				if (animationType === 'css') {
@@ -189,6 +191,7 @@
 				var animationComplete = function () {
 					$content.attr(as, opt.states.closed);
 					$target.attr(as, opt.states.closed);
+					$target.triggerHandler('accordion.' + opt.states.closed);
 					$content.triggerHandler('accordion.' + opt.states.closed);
 				}
 
@@ -197,6 +200,7 @@
 				$content.outerHeight(); // Force webkit browsers to redraw, no need to store the variable
 				$content.attr(as, opt.states.closing);
 				$target.attr(as, opt.states.closing);
+				$target.triggerHandler('accordion.' + opt.states.closing);
 				$content.triggerHandler('accordion.' + opt.states.closing);
 
 				if (animationType === 'css') {
