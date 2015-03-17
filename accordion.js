@@ -52,7 +52,7 @@
 			if (Modernizr && Modernizr.csstransitions) {
 				return 'css';
 			} else {
-				if (typeof window.jQuery.fn.animate === 'function') {
+				if (typeof $.fn.animate === 'function') {
 					return 'jquery';
 				} else {
 					return 'none';
