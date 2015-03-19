@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="/dist/accordion.css">
+</head>
+<body>
+	<nav>
+		<ul>
+			<li>
+				<a href="#" data-accordion-toggler="test1">Test toggler</a>
+				<div data-accordion-content="test1" data-accordion-group="test">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates itaque fugit minima tempore neque impedit fuga excepturi earum a quam quis porro cumque voluptatem, inventore nihil odit facilis deserunt veritatis.</p>
+				</div>
+			</li>
+			<li>
+				<a href="#" data-accordion-toggler="test2">Test toggler</a>
+				<div data-accordion-content="test2" data-accordion-group="test">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates itaque fugit minima tempore neque impedit fuga excepturi earum a quam quis porro cumque voluptatem, inventore nihil odit facilis deserunt veritatis.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, mollitia, beatae! Excepturi voluptate autem tenetur sequi temporibus sunt debitis quos quisquam, ratione fugit voluptatibus sed qui voluptatem porro! Cumque, ipsam!</p>
+				</div>
+			</li>
+		</ul>
+		
+		<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+		<script src="/src/accordion.js"></script>
+		<script>
+			+function ($) {
+				$(function () {
+					var options = {};
+					console.log('trying to init accordions');
+					$('[data-accordion-content]').accordion(options);
+				});
+			} (jQuery);
+		</script>
+</body>
+</html>

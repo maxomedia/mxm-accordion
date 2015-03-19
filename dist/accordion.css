@@ -1,0 +1,14 @@
+[data-accordion-content] {
+  overflow: hidden;
+  height: 0;
+}
+[data-accordion-state="open"] {
+  height: auto;
+}
+[data-accordion-state="opening"],
+[data-accordion-state="closing"] {
+  -webkit-transition: height 300ms;
+     -moz-transition: height 300ms;
+       -o-transition: height 300ms;
+          transition: height 300ms;
+}
