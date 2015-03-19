@@ -11,7 +11,7 @@ Optionally, you can group a set of accordions by adding **data-accordion-group**
 
 See **index.html** for an example usage.
 
-```
+```Javascript
 <link href="path/to/accordion.css" rel="stylesheet"/>
 <script src="path/to/accordion.js"></script>
 <script>
