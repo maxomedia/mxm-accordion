@@ -1,0 +1,22 @@
+{
+  "name": "mxm-accordion",
+  "version": "0.0.1",
+  "homepage": "https://github.com/maxomedia/accordion",
+  "authors": [
+    "philipp.gfeller@maxomedia.ch"
+  ],
+  "description": "Accordion/expander with CSS3 transitions, jQuery fallback or no animation",
+  "main": "dist/accordion.js",
+  "keywords": [
+    "accordion",
+    "expander"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

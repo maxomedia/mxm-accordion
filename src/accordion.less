@@ -1,0 +1,11 @@
+[data-accordion-content] {
+    overflow: hidden;
+    height: 0;
+}
+[data-accordion-state="open"] {
+    height: auto;
+}
+[data-accordion-state="opening"],
+[data-accordion-state="closing"] {
+	transition: height 300ms;
+}
