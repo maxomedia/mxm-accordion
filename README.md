@@ -1,4 +1,4 @@
-# accordion
+# mxm-accordion
 
 #### Prerequisites
 - jQuery (http://jquery.com/download/)
