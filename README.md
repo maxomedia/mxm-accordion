@@ -1,6 +1,6 @@
 # mxm-accordion
 
-An accordion jQuery plugin which is very flexible. It supports tab groups or simple expander functionality, multiple togglers/content containers, emits events on opening, open, closing and closed and uses CSS3 transitions with a jQuery fallback or no animations.
+An accordion jQuery plugin with support for tab groups or simple expander functionality, multiple togglers/content containers, emits events on opening, open, closing and closed and uses CSS3 transitions with a jQuery fallback or no animations.
 
 ### Prerequisites
 - jQuery (http://jquery.com/download/)
