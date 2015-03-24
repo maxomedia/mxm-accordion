@@ -48,6 +48,7 @@ See **index.html** for an example usage.
     // Initialize
     $('[data-accordion-content]').accordion(options);
   </script>
+</body>
 ```
 
 The **data-accordion-state** attribute gets mirrored from the content to the toggler, so you can use it to style arrows.
