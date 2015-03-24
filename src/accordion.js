@@ -146,7 +146,7 @@
 
             callback = function () {
                 acc.state = 'closed';
-                acc.css('height', '');
+                acc.$content.css('height', '');
                 acc.updateState();
             }
 
