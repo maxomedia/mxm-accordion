@@ -146,8 +146,8 @@
 
             callback = function () {
                 acc.state = 'closed';
+                acc.css('height', '');
                 acc.updateState();
-
             }
 
             // Set initial state
