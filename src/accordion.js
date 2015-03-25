@@ -121,7 +121,7 @@
                 acc.$content.css('height', height);
                 acc.$content.one(transitionEnd, callback);
             } else if (animationType === 'jquery') {
-                $content.animate(
+                acc.$content.animate(
                     { height: height },
                     acc.settings.duration,
                     acc.settings.easing,
