@@ -212,15 +212,16 @@
         var id = $content.data('accordion-content');
         var group = $content.data('accordion-group');
         var $toggler = $('[data-accordion-toggler="{0}"]'.compose(id));
+        var $contents = $('[data-accordion-content="{0}"]'.compose(id));
 
         // Abort if one of the above has a non expected value
-        if ($content.length == 0) return;
+        if ($contents.length == 0) return;
         if ($toggler.length == 0) return;
         if (!id) return;
 
         // Init the accordion object
         var accordion = new Accordion();
-        accordion.$content = $content;
+        accordion.$content = $contents;
         accordion.$toggler = $toggler;
         accordion.id = id;
         accordion.settings = options;
